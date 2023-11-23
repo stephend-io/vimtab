@@ -31,5 +31,5 @@ export default defineManifest({
         },
     ],
     permissions: ['tabs', 'bookmarks', 'history'],
-    optional_host_permissions: ['https://*/*'],
+    host_permissions: ['https://*/*'],
 })
