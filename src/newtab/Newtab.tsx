@@ -19,7 +19,11 @@ import QuickAccess from './pages/QuickAccess'
 // const pages: Pages[] = ['home', 'tabs', 'blocks', 'quickAccess', 'todos', 'settings', 'theme']
 
 type Pages = 'home' | 'tabs' | 'settings'
-const pages: Pages[] = ['home', 'tabs', 'settings']
+const pages: Pages[] = [
+    'home',
+    'tabs',
+    // 'settings'
+]
 
 function useVimTabNavigation(
     categories: Pages[],
@@ -81,7 +85,11 @@ const Newtab = () => {
     // return () => window.removeEventListener('keydown', activeTabCallback)
     // }, [activeTabs])
 
-    const indexer = [<Home />, <Tabs />, <Settings />]
+    const indexer = [
+        <Home />,
+        <Tabs />,
+        // <Settings />
+    ]
     return (
         <div
             className="fixed h-screen w-screen bg-primary
@@ -104,7 +112,7 @@ const Newtab = () => {
                 <div className=" flex h-full w-full items-center justify-center ">
                     {indexer[currIndex]}
                 </div>
-                <Footer currIndex={currIndex} />
+                {/* <Footer currIndex={currIndex} /> */}
             </div>
         </div>
     )
